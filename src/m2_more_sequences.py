@@ -109,7 +109,7 @@ def shortest_string(strings):
     # -------------------------------------------------------------------------
     min = 0
     for k in range(1, len(strings)):
-        if strings[k] < strings[min]:
+        if int(strings[k]) strings[min]:
             min = k
 
     return strings[min]
@@ -186,12 +186,12 @@ def index_of_largest_number(numbers, n):
 
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # -------------------------------------------------------------------------
     max = 0
-    for k in range(n):
-        if numbers[k] < numbers[max]:
+    for k in range(1,n):
+        if numbers[k] > numbers[max]:
             max = k
 
     return max
@@ -334,10 +334,12 @@ def is_palindrome(s):
     ###########################################################################
     # -------------------------------------------------------------------------
     count = 0
+    a=0
     for k in range(len(s)):
-        if s[len(s)-k] == s[k]:
-            count = count + 1
 
+        if s[len(s)-k] == s[a]:
+            count = count + 1
+        a = a + 1
     return count
 
 # -----------------------------------------------------------------------------
