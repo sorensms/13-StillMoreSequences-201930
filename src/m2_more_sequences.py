@@ -337,10 +337,14 @@ def is_palindrome(s):
     a=0
     for k in range(len(s)):
 
-        if s[len(s)-k] == s[k]:
-            count = count + 1
-        a = a + 1
-    return count
+        if s[len(s)-1-k] == s[k]:
+           count=count+1
+    if count==len(s):
+        return True
+    else:
+        return False
+
+
 
 # -----------------------------------------------------------------------------
 # Some problems loop (iterate) through two or more sequences
