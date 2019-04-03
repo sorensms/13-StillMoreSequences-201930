@@ -104,12 +104,12 @@ def shortest_string(strings):
       :type strings: list[str]   or tuple(str)
     """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # Done: 2. Implement and test this function.
     #     The testing code is already written for you (above).
     # -------------------------------------------------------------------------
     min = 0
     for k in range(1, len(strings)):
-        if int(strings[k]) strings[min]:
+        if len(strings[k]) < len(strings[min]):
             min = k
 
     return strings[min]
@@ -337,7 +337,7 @@ def is_palindrome(s):
     a=0
     for k in range(len(s)):
 
-        if s[len(s)-k] == s[a]:
+        if s[len(s)-k] == s[k]:
             count = count + 1
         a = a + 1
     return count
